@@ -1,5 +1,4 @@
 const path = require('path');
-const autoprefixer = require('autoprefixer');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
@@ -110,7 +109,6 @@ module.exports = {
     configFile: path.join(__dirname, 'eslint.js'),
     useEslintrc: false
   },
-  // We use PostCSS for autoprefixing only.
   postcss: function() {
     return [
       postcssFocus(), // Add a :focus to every :hover

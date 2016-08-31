@@ -8,7 +8,7 @@
     "prebuild": "npm run build:clean && npm run test",
     "build:clean": "npm run test:clean && rimraf ./build",
     "start:prod": "cross-env NODE_ENV=production node server",
-    "lint:js": "npm run lint:eslint -- . ",
+    "lint:js": "eslint --ignore-path .gitignore -c ./config/eslint.js .",
     "test:clean": "echo Tests Unimplemented",
     "test": "echo Tests Unimplemented"
   },

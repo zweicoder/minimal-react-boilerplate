@@ -1,8 +1,4 @@
-var path = require('path');
-
-function resolveOwn(relativePath) {
-  return path.resolve(__dirname, relativePath);
-}
+const path = require('path');
 
 function resolveApp(relativePath) {
   return path.resolve(relativePath);
