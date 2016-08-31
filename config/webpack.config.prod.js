@@ -13,14 +13,14 @@ const postcssReporter = require('postcss-reporter');
 if (env['process.env.NODE_ENV'] !== '"production"') {
   throw new Error('Production builds must have NODE_ENV=production.');
 }
-// const url = require('url');
-// const homepagePath = require(paths.appPackageJson).homepage;
-// const publicPath = homepagePath ? url.parse(homepagePath).pathname : '/';
-// if (!publicPath.endsWith('/')) {
-//   // If we don't do this, file assets will get incorrect paths.
-//   publicPath += '/';
-// }
-const publicPath = 'static/'
+const url = require('url');
+const homepagePath = require(paths.appPackageJson).homepage;
+const publicPath = homepagePath ? url.parse(homepagePath).pathname : '/';
+if (!publicPath.endsWith('/')) {
+  // If we don't do this, file assets will get incorrect paths.
+  publicPath += '/';
+}
+// const publicPath = 'static/'
 
 const cssModulesConf = 'css?modules&importLoaders=1';
 // 'css-loader?modules&-autoprefixer&importLoaders=1!postcss-loader'

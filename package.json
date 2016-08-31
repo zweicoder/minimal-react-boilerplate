@@ -2,6 +2,7 @@
   "name": "minimal-react-boilerplate",
   "version": "0.0.1",
   "private": true,
+  "homepage": "https://zweicoder.github.io/minimal-react-boilerplate/",
   "scripts": {
     "start": "cross-env NODE_ENV=development node server",
     "build": "cross-env NODE_ENV=production webpack --config ./config/webpack.config.prod.js --color -p",
@@ -10,7 +11,8 @@
     "start:prod": "cross-env NODE_ENV=production node server",
     "lint:js": "eslint --ignore-path .gitignore -c ./config/eslint.js .",
     "test:clean": "echo Tests Unimplemented",
-    "test": "echo Tests Unimplemented"
+    "test": "echo Tests Unimplemented",
+    "gh-pages-deploy": "git subtree push --prefix build origin gh-pages"
   },
   "eslintConfig": {
     "extends": "./config/eslint.js"
